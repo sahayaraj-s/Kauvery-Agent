@@ -1,0 +1,19 @@
+fastapi
+uvicorn[standard]
+playwright
+openai
+openpyxl
+pillow
+python-dotenv
+pydantic
+# CAPTCHA Intelligence & Web Automation Framework dependencies
+aiosqlite
+beautifulsoup4
+lxml
+yt-dlp
+httpx
+# Optional for enhanced features (install manually if needed):
+# paddlepaddle
+# paddleocr
+# opencv-python
+# aiomysql

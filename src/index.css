@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --kauvery-plum: #6B0F48;
+    --kauvery-darkplum: #3A0529;
+    --kauvery-magenta: #D80064;
+    --kauvery-fuchsia: #E6007A;
+    --kauvery-coral: #F85A28;
+    --kauvery-orange: #FF6F22;
+    --kauvery-amber: #FFB81C;
+    --kauvery-gold: #FFC83B;
+  }
+}
+
+/* Glassmorphism primitives */
+.glass-panel {
+  background: radial-gradient(130% 100% at 90% 10%, rgba(58, 5, 41, 0.45) 0%, rgba(20, 4, 21, 0.88) 60%, rgba(10, 2, 11, 0.96) 100%);
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  border: 1px solid rgba(216, 0, 100, 0.22);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8),
+              0 0 35px -5px rgba(216, 0, 100, 0.2),
+              inset 0 1px 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.glass-card {
+  background: rgba(36, 8, 32, 0.45);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(216, 0, 100, 0.16);
+}
+
+.glass-card:hover {
+  background: rgba(58, 12, 48, 0.6);
+  border-color: rgba(248, 90, 40, 0.35);
+}
+
+.glass-pill {
+  background: rgba(45, 9, 38, 0.55);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(216, 0, 100, 0.25);
+}
+
+/* Gradients */
+.bg-kauvery-gradient {
+  background: linear-gradient(135deg, #FFB81C 0%, #F85A28 35%, #D80064 70%, #6B0F48 100%);
+}
+
+.text-kauvery-gradient {
+  background: linear-gradient(135deg, #FFC83B 0%, #F85A28 40%, #E6007A 75%, #FFFFFF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.border-kauvery-gradient {
+  border-image: linear-gradient(135deg, #FFB81C, #F85A28, #D80064) 1;
+}
+
+/* Glowing effects */
+.glow-magenta {
+  box-shadow: 0 0 25px rgba(216, 0, 100, 0.45);
+}
+
+.glow-coral {
+  box-shadow: 0 0 25px rgba(248, 90, 40, 0.45);
+}
+
+.glow-amber {
+  box-shadow: 0 0 25px rgba(255, 184, 28, 0.45);
+}
+
+.glow-ambient {
+  filter: drop-shadow(0 0 18px rgba(216, 0, 100, 0.35)) drop-shadow(0 0 35px rgba(248, 90, 40, 0.25));
+}
+
+/* Animations */
+@keyframes pulseGaze {
+  0%, 100% { opacity: 0.9; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.05); }
+}
+
+@keyframes energyWave {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-energy-wave {
+  background-size: 200% 200%;
+  animation: energyWave 4s ease infinite;
+}
+
+/* Draggable regions */
+.drag-region {
+  -webkit-app-region: drag;
+}
+
+.no-drag {
+  -webkit-app-region: no-drag;
+}
